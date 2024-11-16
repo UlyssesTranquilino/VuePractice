@@ -3,6 +3,8 @@
     HOME
     <p ref="paragraph">My nbame is {{ name }} and my age is {{ age }}</p>
     <button @click="handleClick">CLIcK me</button>
+    <button @click="age++">Add 1 to age</button>
+    <input type="text" v-model="name" />
   </div>
 </template>
 
@@ -11,12 +13,11 @@ import { ref } from "vue";
 
 const paragraph = ref<HTMLElement | null>(null);
 
-const name: string = "ulysses";
-const age: number = 19;
+const name = ref<string>("ulysses");
+const age = ref<number>(19);
 
 const handleClick = (): void => {
-  console.log("You clicked me! ", paragraph, paragraph.value);
-  paragraph.value.classList.add("test");
-  paragraph.value.textContent = "Hello ";
+  name.value = "yulsz";
+  age.value = 20;
 };
 </script>
